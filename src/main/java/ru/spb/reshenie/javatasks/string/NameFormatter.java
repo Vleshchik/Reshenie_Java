@@ -3,7 +3,8 @@ package ru.spb.reshenie.javatasks.string;
 import java.util.*;
 
 //Скорректировать регистр у ФИО + вывести инициалы (иванов ИВАН иВаНович -> Иванов Иван Иванович, Иванов И.И.)
-public class NameFormatter {
+public class NameFormatter
+{
 
     public static String formatName(String fullName) {
         String[] names = fullName.split(" ");
