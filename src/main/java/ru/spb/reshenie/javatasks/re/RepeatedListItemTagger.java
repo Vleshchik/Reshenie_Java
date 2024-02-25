@@ -21,11 +21,4 @@ public class RepeatedListItemTagger {
         matcher.appendTail(result);
         return result.toString();
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String htmlList = sc.nextLine(); //"<ul><li>Apple</li><li>Apple</li><li>Orange</li><li>Banana</li><li>Orange</li></ul>";
-        String formattedList = highlightRepeatedItems(htmlList);
-        System.out.println(formattedList);
-    }
 }

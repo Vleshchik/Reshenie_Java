@@ -17,10 +17,4 @@ public class ConverterOfMarkdownListToHtml {
 
         return htmlList.toString();
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String markdownList = sc.nextLine(); //* Item 1\n* Item 2\n* Item 3
-        System.out.println(convertMarkdownListToHtml(markdownList));
-    }
 }

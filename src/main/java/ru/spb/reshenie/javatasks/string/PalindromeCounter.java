@@ -16,9 +16,4 @@ public class PalindromeCounter {
         String reversed = new StringBuilder(str).reverse().toString();
         return str.equalsIgnoreCase(reversed);
     }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        System.out.println(findPalindromes(sentence));
-    }
 }

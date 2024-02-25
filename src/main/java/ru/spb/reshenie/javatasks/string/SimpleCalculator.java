@@ -14,36 +14,26 @@ public class SimpleCalculator {
         }
         return result;
     }
-    public static int calculator(String[] act) {
-        switch (act[1]) {
-            case "+":
-                return Integer.parseInt(act[0].trim()) + Integer.parseInt(act[2].trim());
-            case "-":
-                return Integer.parseInt(act[0].trim()) - Integer.parseInt(act[2].trim());
-            case "*":
-                return Integer.parseInt(act[0].trim()) * Integer.parseInt(act[2].trim());
-            case "/":
-                return Integer.parseInt(act[0].trim()) / Integer.parseInt(act[2].trim());
-            case "**":
-                return (int) Math.pow(Integer.parseInt(act[0].trim()), Integer.parseInt(act[2].trim()));
-            case "log":
-                return Integer.parseInt(act[0].trim()) + Integer.parseInt(act[2].trim());
-        }
-        return 0;
-    }
-
-    public static void main(String[] args){
-        System.out.println("Введите данные для расчета (переменные и действия оделены пробелом, например: 2 + 2):");
-        Scanner sc = new Scanner(System.in);
-        String calc = sc.nextLine();
+    public static int calculator(String calc) {
         String[] act = calc.split("\\s+");
         if (act.length == 1 && act[0].charAt(0) == '!') {
             System.out.println(factorial(Integer.parseInt(act[0].substring(1).trim())));
         } else if (act[0].equals("log")) {
             System.out.println(logarithm(Integer.parseInt(act[1].trim()), Integer.parseInt(act[2].trim())));
         } else {
-            System.out.println(calculator(act));
+            switch (act[1]) {
+                case "+":
+                    return Integer.parseInt(act[0].trim()) + Integer.parseInt(act[2].trim());
+                case "-":
+                    return Integer.parseInt(act[0].trim()) - Integer.parseInt(act[2].trim());
+                case "*":
+                    return Integer.parseInt(act[0].trim()) * Integer.parseInt(act[2].trim());
+                case "/":
+                    return Integer.parseInt(act[0].trim()) / Integer.parseInt(act[2].trim());
+                case "**":
+                    return (int) Math.pow(Integer.parseInt(act[0].trim()), Integer.parseInt(act[2].trim()));
+            }
         }
-
+        return 0;
     }
 }

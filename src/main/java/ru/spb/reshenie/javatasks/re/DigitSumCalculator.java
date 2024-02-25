@@ -5,13 +5,13 @@ import java.util.regex.*;
 public class DigitSumCalculator {
 
 
-    public static void findAndPrintRationalNumberDigitSums(String input) {
+    public static String findAndPrintRationalNumberDigitSums(String input) {
         Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
         Matcher matcher = pattern.matcher(input);
-
+        String number = null;
+        double sum = 0.0;
         while (matcher.find()) {
-            String number = matcher.group();
-            double sum = 0.0;
+            number = matcher.group();
 
             if (number.contains(".")) {
                 String[] parts = number.split("\\.");
@@ -27,13 +27,8 @@ public class DigitSumCalculator {
                     }
                 }
             }
-
-            System.out.println("Сумма цифр числа " + number + ": " + sum);
         }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        findAndPrintRationalNumberDigitSums(input);
+        
+        return "Сумма цифр числа " + number + ": " + sum;
     }
 }

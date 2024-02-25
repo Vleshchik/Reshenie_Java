@@ -15,11 +15,4 @@ public class RandomStringGenerator {
         }
         return sb.toString();
     }
-
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String word = generateString(n);
-        System.out.println(word);
-    }
 }

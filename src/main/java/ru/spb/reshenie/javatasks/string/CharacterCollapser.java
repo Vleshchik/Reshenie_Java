@@ -1,7 +1,4 @@
 package ru.spb.reshenie.javatasks.string;
-
-import java.util.Scanner;
-
 //Схлопнуть повторяющиеся символы
 public class CharacterCollapser {
     public static String collapseDuplicates(String str) {
@@ -14,10 +11,5 @@ public class CharacterCollapser {
             }
         }
         return result.toString();
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        System.out.println(collapseDuplicates(sentence));
     }
 }

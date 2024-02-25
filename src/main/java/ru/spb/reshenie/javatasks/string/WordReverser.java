@@ -1,7 +1,4 @@
 package ru.spb.reshenie.javatasks.string;
-
-import java.util.*;
-
 //Развернуть слова в предложении
 public class WordReverser {
     //Вариант 1 - меняем порядок слов в предложении
@@ -21,11 +18,5 @@ public class WordReverser {
             reversedSentence.append(new StringBuilder(words[i]).reverse()).append(" ");
         }
         return reversedSentence.toString().trim();
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        System.out.println(reverseWords1(sentence));
-        System.out.println(reverseWords2(sentence));
     }
 }

@@ -17,14 +17,4 @@ public class MapParser {
 
         return resultMap;
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        Map<String, String> resultMap = parseMap(input);
-        for (Map.Entry<String, String> entry : resultMap.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        }
-    }
-
 }

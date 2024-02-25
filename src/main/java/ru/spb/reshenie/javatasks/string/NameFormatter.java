@@ -1,7 +1,4 @@
 package ru.spb.reshenie.javatasks.string;
-
-import java.util.*;
-
 //Скорректировать регистр у ФИО + вывести инициалы (иванов ИВАН иВаНович -> Иванов Иван Иванович, Иванов И.И.)
 public class NameFormatter
 {
@@ -23,12 +20,5 @@ public class NameFormatter
             initials.append(names[i].substring(0, 1).toUpperCase()).append(".");
         }
         return initials.toString();
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String fio = sc.nextLine();
-        System.out.println(formatName(fio));
-        System.out.println(getInitials(fio));
-
     }
 }

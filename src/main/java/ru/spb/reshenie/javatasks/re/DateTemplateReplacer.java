@@ -14,12 +14,4 @@ public class DateTemplateReplacer {
         }
         return input;
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String text = sc.nextLine(); //Today's date is $DATE{ddMMyyyy}.
-        String replacedText = replaceDatePlaceholder(text);
-        System.out.println(replacedText);
-
-    }
 }

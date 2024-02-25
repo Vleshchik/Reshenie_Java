@@ -1,7 +1,4 @@
 package ru.spb.reshenie.javatasks.string;
-
-import java.util.Scanner;
-
 //Посчитать кол-во вхождений символа
 public class CharacterOccurrenceCounter {
 
@@ -13,13 +10,5 @@ public class CharacterOccurrenceCounter {
             }
         }
         return count;
-    }
-
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine().toLowerCase();
-        String letter = sc.nextLine().toLowerCase();
-        char ch = letter.charAt(0);
-        System.out.println(countCharInSentence(sentence, ch));
     }
 }

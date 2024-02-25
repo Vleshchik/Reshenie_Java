@@ -13,11 +13,4 @@ public class RationalNumberSumCalculator {
         }
         return sum;
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        double sum = findRationalNumberSum(input);
-        System.out.println("Сумма рациональных чисел: " + sum);
-    }
-
 }

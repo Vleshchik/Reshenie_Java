@@ -14,13 +14,11 @@ public class PasswordStrengthChecker {
         if (digitMatcher.find()) {
             count++;
         }
-
         Pattern uppercasePattern = Pattern.compile("[A-Z]");
         Matcher uppercaseMatcher = uppercasePattern.matcher(password);
         if (uppercaseMatcher.find()) {
             count++;
         }
-
         Pattern lowercasePattern = Pattern.compile("[a-z]");
         Matcher lowercaseMatcher = lowercasePattern.matcher(password);
         if (lowercaseMatcher.find()) {
@@ -33,11 +31,6 @@ public class PasswordStrengthChecker {
         } else {
             return "Пароль ненадежный";
         }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String password = sc.nextLine();
-        System.out.println(checkPasswordStrength(password));
     }
 }
 

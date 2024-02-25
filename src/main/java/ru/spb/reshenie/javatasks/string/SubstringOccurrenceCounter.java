@@ -1,7 +1,4 @@
 package ru.spb.reshenie.javatasks.string;
-
-import java.util.Scanner;
-
 //Кол-во вхождений подстроки
 public class SubstringOccurrenceCounter {
     public static int countSubstringInSentence(String s, String ss){
@@ -13,12 +10,5 @@ public class SubstringOccurrenceCounter {
             }
         }
         return count;
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        String substring = sc.nextLine();
-
-        System.out.println(countSubstringInSentence(sentence, substring));
     }
 }
