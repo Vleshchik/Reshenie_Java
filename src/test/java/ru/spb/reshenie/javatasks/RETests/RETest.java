@@ -1,4 +1,4 @@
-package ru.spb.reshenie.javatasks;
+package ru.spb.reshenie.javatasks.RETests;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ru.spb.reshenie.javatasks.re.*;

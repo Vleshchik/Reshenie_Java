@@ -2,7 +2,7 @@ package ru.spb.reshenie.javatasks.files;
 
 import java.io.IOException;
 
-public class ExternalProcessExample {
+public class ExternalProcess {
     public static void executeBatchFile(String pathToBatchFile) {
         try {
             Runtime.getRuntime().exec("cmd /c start " + pathToBatchFile);
