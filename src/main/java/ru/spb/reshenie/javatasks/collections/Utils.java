@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 //Реализовать метод приведения коллекции к типу с дженериком с проверкой типов элементов: Collection -> Collection<T>
 public class Utils {
-    static <T> Collection<T> castCollection(Collection<?> collection, Class<T> elementType) {
+    public static <T> Collection<T> castCollection(Collection<?> collection, Class<T> elementType) {
         List<T> result = new ArrayList<>();
         for (Object obj : collection) {
             if (elementType.isInstance(obj)) {

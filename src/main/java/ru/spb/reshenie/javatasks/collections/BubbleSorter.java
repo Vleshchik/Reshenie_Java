@@ -16,14 +16,4 @@ public class BubbleSorter {
             }
         }
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String numbers = sc.nextLine();
-
-        List<Integer> numbersList = Arrays.stream(numbers.split(" "))
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());
-        bubbleSort(numbersList);
-        System.out.println(numbersList);
-    }
 }

@@ -13,18 +13,4 @@ public class ListComparator {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите первый список чисел через пробел:");
-        String input1 = scanner.nextLine();
-        List<Integer> list1 = parseInput(input1);
-
-        System.out.println("Введите второй список чисел через пробел:");
-        String input2 = scanner.nextLine();
-        List<Integer> list2 = parseInput(input2);
-
-        double similarityPercentage = compareLists(list1, list2);
-        System.out.println("Процент схожести: " + similarityPercentage + "%");
-    }
 }

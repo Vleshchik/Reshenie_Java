@@ -14,7 +14,6 @@ public class TypeConverter {
         converters.put(type, convert);
     }
 
-    @SuppressWarnings("unchecked")
     public <T> T convert(Object value, Class<T> type) {
         Function<Object, ?> converter = converters.get(type);
         if (converter != null) {

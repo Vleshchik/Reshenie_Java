@@ -3,7 +3,7 @@ package ru.spb.reshenie.javatasks.files;
 import java.io.*;
 
 
-public class FileSplitExample {
+public class FileSplitExample {/*
     public static void splitByTenLines(String[] args) throws Exception {
         String inputFile = "input.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
@@ -58,5 +58,5 @@ public class FileSplitExample {
             }
             writer.close();
         }
-    }
+    }*/
 }
