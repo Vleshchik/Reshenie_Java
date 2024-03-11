@@ -7,7 +7,6 @@ import ru.spb.reshenie.javatasks.re.DateFormatter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static junit.framework.Assert.assertEquals;
 
 public class DateFormatterTest {
     @Test

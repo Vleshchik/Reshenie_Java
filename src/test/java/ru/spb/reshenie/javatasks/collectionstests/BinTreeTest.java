@@ -1,9 +1,10 @@
 package ru.spb.reshenie.javatasks.collectionstests;
 import org.junit.jupiter.api.Test;
 
-import static junit.framework.Assert.assertEquals;
+
 import ru.spb.reshenie.javatasks.collections.BinTree;
 import ru.spb.reshenie.javatasks.collections.BinTreeNode;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BinTreeTest {
     @Test

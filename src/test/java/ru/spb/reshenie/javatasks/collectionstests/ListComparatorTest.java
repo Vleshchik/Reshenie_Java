@@ -3,7 +3,7 @@ package ru.spb.reshenie.javatasks.collectionstests;
 import org.junit.jupiter.api.Test;
 import ru.spb.reshenie.javatasks.collections.ListComparator;
 import java.util.*;
-import static junit.framework.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ListComparatorTest {
         @Test
         public void testCompareLists() {

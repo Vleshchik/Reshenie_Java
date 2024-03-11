@@ -2,9 +2,9 @@ package ru.spb.reshenie.javatasks.files;
 
 import java.io.File;
 
-public class FileTreeExample {
+public class FileTree {
     public static void main(String[] args) {
-        File directory = new File("путь_к_папке");
+        File directory = new File("src\\main\\resources\\FileList");
         listFiles(directory, 0);
     }
 

@@ -1,12 +1,12 @@
 package ru.spb.reshenie.javatasks.files;
-
+//Посчитать размер папки, количество вложенных файлов, папок и максимальный уровень вложенности
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
-import java.util.stream.Stream;
 
-public class FolderStatsExample {
-    public static void main(String[] args) throws Exception {
-        File directory = new File("путь_к_папке");
+public class DirectoryInfo {
+    public String printDirectoryInfo(String directoryPath) throws IOException {
+        File directory = new File(directoryPath);
         long size = Files.walk(directory.toPath())
                 .mapToLong(path -> path.toFile().length())
                 .sum();
@@ -20,6 +20,6 @@ public class FolderStatsExample {
                 .map(path -> directory.toPath().relativize(path).getNameCount() - 1)
                 .max(Integer::compare)
                 .orElse(0);
-        System.out.println("Size: " + size + " bytes, Files: " + filesCount + ", Folders: " + foldersCount + ", Max Depth: " + maxDepth);
+        return "Size: " + size + " bytes, Files: " + filesCount + ", Folders: " + foldersCount + ", Max Depth: " + maxDepth;
     }
 }

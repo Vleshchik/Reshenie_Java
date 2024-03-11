@@ -5,7 +5,7 @@ import ru.spb.reshenie.javatasks.collections.CollectionIntersection;
 
 import java.util.*;
 
-import static junit.framework.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CollectionIntersectionTest {
     @Test
