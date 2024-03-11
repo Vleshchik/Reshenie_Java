@@ -1,24 +1,23 @@
 package ru.spb.reshenie.javatasks.files;
 
 import java.io.File;
-
+import java.util.*;
+//Вывести дерево файлов с корнем в заданной папке
 public class FileTree {
-    public static void main(String[] args) {
-        File directory = new File("src\\main\\resources\\FileList");
-        listFiles(directory, 0);
-    }
-
-    public static void listFiles(File directory, int depth) {
+    public List<String> listFiles(File directory, int depth) {
+        List<String> filesList = new ArrayList<>();
         if (directory.isDirectory()) {
             for (File file : directory.listFiles()) {
+                String tb = "";
                 for (int i = 0; i < depth; i++) {
-                    System.out.print("\t");
+                    tb += "\t";
                 }
-                System.out.println(file.getName());
+                filesList.add(tb + file.getName());
                 if (file.isDirectory()) {
-                    listFiles(file, depth + 1);
+                    filesList.addAll(listFiles(file, depth + 1));
                 }
             }
         }
+        return filesList;
     }
 }
