@@ -8,9 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-public class FileGroupingExample {
-    public static void groupAndZipFilesByCreationDate(String sourceDir) {
+//Разбить файлы в заданной папке на группы по дате создания и упаковать в архивы 20180730.zip, 20180729.zip, ...
+public class FileGrouping {
+    public void groupAndZipFilesByCreationDate(String sourceDir) {
         File[] files = new File(sourceDir).listFiles();
         if (files != null) {
             for (File file : files) {

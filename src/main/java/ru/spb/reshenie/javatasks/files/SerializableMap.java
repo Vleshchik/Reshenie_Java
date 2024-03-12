@@ -3,12 +3,17 @@ package ru.spb.reshenie.javatasks.files;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-
-public class SerializableMapExample {
+/*
+Реализовать сериализуемую мапу с форматом "KEY1=VAL1\nKEY2=:VAL2:VAL3:":
+- файл задается в конструкторе
+- метод load читает файл в мапу, метод save наоборот
+- если значение содержит ':', то это список
+ */
+public class SerializableMap {
     private Map<String, String> map;
     private File file;
 
-    public SerializableMapExample(File file) {
+    public SerializableMap(File file) {
         this.file = file;
         this.map = new HashMap<>();
     }

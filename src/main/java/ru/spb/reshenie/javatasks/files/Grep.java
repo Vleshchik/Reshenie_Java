@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class GrepExample {
-    public static void grep(String rootDir, String searchText) {
+public class Grep {
+    public void grep(String rootDir, String searchText) {
         try {
             Files.walk(new File(rootDir).toPath())
                     .filter(Files::isRegularFile)
