@@ -26,21 +26,4 @@ public class SymbolThreadClose implements Runnable {
                 }
             }
         }
-
-
-
-        public static void main(String[] args) {
-            SymbolThreadClose symbolThread = new SymbolThreadClose('*', 5);
-            Thread thread = new Thread(symbolThread);
-            thread.start();
-
-            // Завершение потока через 3 секунды
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            symbolThread.stop();
-        }
-
 }

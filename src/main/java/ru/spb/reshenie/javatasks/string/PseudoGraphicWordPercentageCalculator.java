@@ -12,7 +12,7 @@ import java.util.Scanner;
 в на
  */
 public class PseudoGraphicWordPercentageCalculator {
-    public static void printPercentageGraph(Map<String, Integer> frequencyMap) {
+    public void printPercentageGraph(Map<String, Integer> frequencyMap) {
         int total = frequencyMap.values().stream().mapToInt(Integer::intValue).sum();
         for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
             int percentage = (int) Math.round((double) entry.getValue() / total * 100);
@@ -23,17 +23,12 @@ public class PseudoGraphicWordPercentageCalculator {
             System.out.println();
         }
     }
-    public static Map<String, Integer> countWordFrequency(String str){
+    public Map<String, Integer> countWordFrequency(String str){
         String[] words = str.split("\\s+");
         Map<String, Integer> dict = new HashMap<>();
         for (String word : words) {
             dict.put(word, dict.getOrDefault(word, 0) + 1);
         }
         return dict;
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        printPercentageGraph(countWordFrequency(sentence));
     }
 }

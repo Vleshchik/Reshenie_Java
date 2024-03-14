@@ -10,7 +10,7 @@ import java.util.*;
 a(20%) b(50%) c(30%)
  */
 public class PseudoGraphicCharacterPercentageCalculator {
-    public static void printPercentageGraph(Map<Character, Integer> frequencyMap) {
+    public void printPercentageGraph(Map<Character, Integer> frequencyMap) {
         int total = frequencyMap.values().stream().mapToInt(Integer::intValue).sum();
         for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
             int percentage = (int) Math.round((double) entry.getValue() / total * 100);
@@ -27,10 +27,5 @@ public class PseudoGraphicCharacterPercentageCalculator {
             dict.put(ch, dict.getOrDefault(ch, 0) + 1);
         }
         return dict;
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
-        printPercentageGraph(countCharacterFrequency(sentence));
     }
 }

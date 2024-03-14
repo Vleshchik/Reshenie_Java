@@ -1,43 +1,23 @@
 package ru.spb.reshenie.javatasks.stream;
 
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
-
-
-class ObjectPool {
-    private BlockingQueue<PooledObject> pool;
+public class ObjectPool {
+    public final BlockingQueue<String> pool;
 
     public ObjectPool(int size) {
-        pool = new ArrayBlockingQueue<>(size);
+        pool = new LinkedBlockingQueue<>(size);
         for (int i = 0; i < size; i++) {
-            pool.add(new PooledObject("Object " + i));
+            pool.add("Object" + i);
         }
     }
 
-    public PooledObject getObject() throws InterruptedException {
-        return pool.take();
+    public String getObject() throws InterruptedException {
+        return pool.take(); // Блокирующий вызов, ждет, пока не появится свободный объект
     }
 
-    public void releaseObject(PooledObject obj) {
-        pool.offer(obj);
-    }
-    public static void main(String[] args) {
-        ObjectPool objectPool = new ObjectPool(5);
-
-        for (int i = 0; i < 10; i++) {
-            Thread thread = new Thread(() -> {
-                try {
-                    PooledObject obj = objectPool.getObject();
-                    System.out.println(Thread.currentThread().getName() + " got " + obj.getData());
-                    Thread.sleep(2000);
-                    objectPool.releaseObject(obj);
-                    System.out.println(Thread.currentThread().getName() + " released " + obj.getData());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            });
-            thread.start();
-        }
+    public void releaseObject(String obj) throws InterruptedException {
+        pool.put(obj); // Освобождение объекта и добавление его обратно в пул
     }
 }
